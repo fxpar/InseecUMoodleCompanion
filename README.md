@@ -10,3 +10,7 @@ Simplifies Navigation on Moodle sites from INSEEC U universities
 ## Languages
 English and French.
 Detects the default language from the browser
+
+/screenshots/inseecUMoodleCompanion-en.png
+
+/screenshots/inseecUMoodleCompanion-fr.png
