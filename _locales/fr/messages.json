@@ -9,6 +9,11 @@
     "description": "Description of the extension."
   },
   
+    "lorem": {
+    "message": "Lorem Ipsum faux message",
+    "description": "Description of the extension."
+  },
+  
     "lang": {
     "message": "fr",
     "description": "Description of the extension."

@@ -8,6 +8,11 @@
     "message": "Simplifies Navigation on Moodle sites from INSEEC U universities."
   },
   
+      "lorem": {
+    "message": "Lorem Ipsum dummy message",
+    "description": "Description of the extension."
+  },
+  
      "lang": {
     "message": "en",
     "description": "Description of the extension."
