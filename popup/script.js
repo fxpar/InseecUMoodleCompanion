@@ -1,4 +1,12 @@
-
+function initialize(){
+	
+	chrome.storage.sync.get(['header', 'footer'], function(items) {
+				  console.log('Settings retrieved INIT HEADER:'+ items.header);
+				  console.log('Settings retrieved INIT FOOTER:'+ items.footer);
+				  document.getElementById('checkbox1').checked = items.header;
+				  document.getElementById('checkbox2').checked = items.footer;
+				});
+}
 
 function listenForClicks() {
   document.addEventListener("click", (e) => {
@@ -10,7 +18,7 @@ function listenForClicks() {
 
 		switch (e.target.id) {
 			
-			case "action1":
+			case "button1":
 				var myAlert = '**'+extName+'**:'+chrome.i18n.getMessage("action1");
 				console.log(myAlert);
 			  chrome.tabs.executeScript(tabs[0].id, {
@@ -18,14 +26,14 @@ function listenForClicks() {
 				var target = document.querySelector('[role="banner"]');
 				if (target.style.display === "none"){
 					target.style.display = "block";
-					console.log('**FOOTER**:'+target.style.display);
+					console.log('**HEADER**:'+target.style.display);
 				}else{
 					target.style.display = "none";
 				}`
 			});
 			break;
 			
-			case "action2":
+			case "button2":
 				var myAlert = '**'+extName+'**:'+chrome.i18n.getMessage("action2");
 				console.log(myAlert);
 			  chrome.tabs.executeScript(tabs[0].id, {
@@ -40,7 +48,7 @@ function listenForClicks() {
 			});
 			break;
 			
-			case "action3":
+			case "button3":
 				var myAlert = '**'+extName+'**:'+chrome.i18n.getMessage("action3");
 				console.log(myAlert);
 			  chrome.tabs.executeScript(tabs[0].id, {
@@ -48,13 +56,38 @@ function listenForClicks() {
 			});
 			break;
 			
-			case "action4":
+			case "button4":
 				var myAlert = '**'+extName+'**:'+chrome.i18n.getMessage("action4");
 				console.log(myAlert);
 			  chrome.tabs.executeScript(tabs[0].id, {
 			  code: `document.getElementById("div").classList.remove("NePasImprimer"); document.getElementById("div").classList.remove("ThemeEmeraude"); document.getElementById("div").classList.remove("SansSelectionTexte"); document.getElementById("div").classList.remove("BloquerInterface"); document.body.innerHTML += '<div style="position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000;"></div>'; window.alert('`+myAlert+`');`
 			});
 			break;
+			
+			case "checkbox1":
+				var header = document.getElementById('checkbox1').checked;
+				 chrome.storage.sync.set({'header': header}, function() {
+      console.log('Chrome sync Settings saved header');
+    });
+				console.log('Chrome sync set for:header ='+header);
+				chrome.storage.sync.get(['header'], function(items) {
+				  console.log('Settings retrieved HEADER:'+ items.header);
+				});
+			break;			
+			
+			case "checkbox2":
+				var footer = document.getElementById('checkbox2').checked;
+				 chrome.storage.sync.set({'footer': footer}, function() {
+      console.log('Chrome sync Settings saved footer');
+    });
+				console.log('Chrome sync set for:footer ='+footer);
+				chrome.storage.sync.get(['footer'], function(items) {
+				  console.log('Settings retrieved FOOTER:'+ items.footer);
+				});
+			break;
+
+			
+			
 
 		}
 		
@@ -112,7 +145,7 @@ function reportExecuteScriptError(error) {
 
 try{
 //internationalizePopup();
-//initialize();
+initialize();
 listenForClicks();
 }
 catch(error){

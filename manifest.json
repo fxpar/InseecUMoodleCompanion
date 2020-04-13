@@ -1,9 +1,9 @@
 {
 
-  "description": "Simplifies Navigation on Moodle sites from INSEEC U universities",
+  "description": "Simplifies navigation on Moodle sites from INSEEC U universities",
   "manifest_version": 2,
   "name": "InseecUMoodleCompanion",
-  "version": "0.0.0.1",
+  "version": "0.0.0.3",
   "homepage_url": "https://github.com/fxpar/InseecUMoodleCompanion",
     "default_locale": "en",
   "icons": {
@@ -15,12 +15,20 @@
   },
 
   "permissions": [
-    "activeTab"
+    "activeTab",
+	"storage"
   ],
+  
  
+   "applications": {
+    "gecko": {
+      "id": "inseecumoodlecompanion@ep2b.fr"
+    }
+  },
+  
 
       "options_ui": {
-    "page": "options.html",
+    "page": "options/options-redirect.html",
     "open_in_tab": false
   },
 
