@@ -1,0 +1,40 @@
+{
+  "extensionName": {
+    "message": "InseecU Moodle Compagnion",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Simplifie la navigation sur les sites Moodle du Groupe INSEEC U.",
+    "description": "Description of the extension."
+  },
+  
+    "lang": {
+    "message": "fr",
+    "description": "Description of the extension."
+  },
+  
+
+     "action1": {
+    "message": "Afficher / Masquer la barre d'entête.",
+    "description": "Title of the click notification."
+  }, 
+  
+     "action2": {
+    "message": "Masquer / Afficher le pied-de-page.",
+    "description": "Title of the click notification."
+  }, 
+
+     "action3": {
+    "message": "Masquer / Affiche le panneau latéral.",
+    "description": "Title of the click notification."
+  }, 
+  
+  
+       "aucunCoursAlert": {
+    "message": "Aucun cours trouvé\\nDésolé...😢",
+    "description": "Title of the click notification."
+  }
+  
+
+}

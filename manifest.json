@@ -1,0 +1,85 @@
+{
+
+  "description": "Simplifies Navigation on Moodle sites from INSEEC U universities",
+  "manifest_version": 2,
+  "name": "InseecUMoodleCompanion",
+  "version": "0.0.0.1",
+  "homepage_url": "https://github.com/fxpar/InseecUMoodleCompanion",
+    "default_locale": "en",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  
+    "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+ 
+
+      "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.pedagogy.campusonline.me/*"],
+      "js": ["nofooter.js"]
+    },
+	
+	{
+      "matches": ["*://*.pedago-msc.campusonline.me/*"],
+      "js": ["nofooter.js"]
+    },
+	
+	{
+      "matches": ["*://*.online.monaco.edu/*"],
+      "js": ["nofooter.js"]
+    },
+
+	{
+      "matches": ["*://*.cours.heip.fr/*"],
+      "js": ["nofooter.js"]
+    },
+	
+	{
+      "matches": ["*://*.campus.ecetech.fr/*"],
+      "js": ["nofooter.js"]
+    },
+
+	{
+      "matches": ["*://*.pedago-bba.campusonline.me/*"],
+      "js": ["nofooter.js"]
+    },
+	
+	{
+      "matches": ["*://*.pedago-esce.campusonline.me/*"],
+      "js": ["nofooter.js"]
+    },
+	
+	{
+      "matches": ["*://*.pedago-ece.campusonline.me/*"],
+      "js": ["nofooter.js"]
+    },
+	
+	{
+	  "matches": ["*://*.pedago-bs.campusonline.me/*"],
+      "js": ["nofooter.js"]
+    }
+  ],
+
+
+"browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    },
+	"default_title": "InseecU Moodle Companion",
+    "default_popup": "popup/redirect.html"
+  }
+
+}

@@ -1,0 +1,39 @@
+{
+  "extensionName": {
+    "message": "InseecUMoodleCompanion",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Simplifies Navigation on Moodle sites from INSEEC U universities."
+  },
+  
+     "lang": {
+    "message": "en",
+    "description": "Description of the extension."
+  },
+  
+
+
+     "action1": {
+    "message": "Hide / Display the page header.",
+    "description": "Title of the click notification."
+  }, 
+  
+    "action2": {
+    "message": "Hide / Display page footer.",
+    "description": "Title of the click notification."
+  }, 
+
+    "action3": {
+    "message": "Show / Hide Lateral panel.",
+    "description": "Title of the click notification."
+  }, 
+  
+     "aucunCoursAlert": {
+    "message": "No course found\\nSorry...😢",
+    "description": "Title of the click notification."
+  }
+  
+
+}
