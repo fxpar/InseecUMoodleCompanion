@@ -7,3 +7,6 @@ Simplifies Navigation on Moodle sites from INSEEC U universities
 * Manually hide / redisplay the header banner
 * Hide / display the lateral menu (left drawer) ... useful when the banner is hidden
 
+## Languages
+English and French.
+Detects the default language from the browser
