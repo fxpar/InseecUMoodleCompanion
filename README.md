@@ -11,6 +11,12 @@ Simplifies Navigation on Moodle sites from INSEEC U universities
 English and French.
 Detects the default language from the browser
 
+## Screenshots
+
+### In English (here, exemple on Firefox)
+
 ![InseecU Moodle Companion in English](/screenshots/inseecUMoodleCompanion-en.png)
+
+### In French (here, example on Chrome)
 
 ![InseecU Moodle Companion in French](/screenshots/inseecUMoodleCompanion-fr.png)
